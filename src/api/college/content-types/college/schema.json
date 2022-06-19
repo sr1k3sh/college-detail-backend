@@ -33,7 +33,10 @@
       "type": "email"
     },
     "contact": {
-      "type": "integer"
+      "type": "biginteger",
+      "min": "10",
+      "max": "10",
+      "required": true
     },
     "gallery": {
       "type": "media",
@@ -60,17 +63,6 @@
       "relation": "manyToMany",
       "target": "api::category.category",
       "inversedBy": "colleges"
-    },
-    "icon": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
     },
     "status": {
       "type": "string"
